@@ -8,5 +8,6 @@ channel = grpc.insecure_channel('localhost:50051')
 stub = user_service_pb2_grpc.UserServiceStub(channel)
 
 # Отправляем запрос
-response = stub.GetUser(user_service_pb2.GetUserRequest(username="Bob"))
-print(response.message)  # Выведет: Привет, Alice!
+for c in ("Alice", 'Bob', 'Marvel', 'Optimus', 'Salage', 'Marines', 'Indigo'):
+    response = stub.GetUser(user_service_pb2.GetUserRequest(username=c))
+    print(response.message)  # Выведет: Привет, Alice!
