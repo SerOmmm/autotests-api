@@ -46,7 +46,7 @@ course_default_model = CourseSchema(
     # Добавили инициализацию вложенной модели FileSchema
     previewFile=FileSchema(
         id="file-id",
-        url="http://localhost.com",
+        url="http://localhost:8000",
         filename="file.png",
         directory="courses",
     ),
@@ -122,7 +122,7 @@ print('Course JSON model:', course_json_model)
 try:
     file = FileSchema(
         id="file-id",
-        url="http://localhost:8000",
+        url="http://localhost.com",
         filename="file.png",
         directory="courses",
     )
