@@ -3,13 +3,13 @@ from clients.exercises.exercises_client import CreateExerciseQueryDict, get_exer
 from clients.files.files_client import get_files_client, CreateFileRequestDict
 from clients.private_http_builder import AuthenticationUserDict
 from clients.users.public_users_client import get_public_users_client, CreateUserRequestDict
-from tools.fakers import get_random_email
+from tools.fakers import fake
 
 public_users_client = get_public_users_client()
 
 # Создаем пользователя
 create_user_request = CreateUserRequestDict(
-    email=get_random_email(),
+    email=fake.email(),
     password="string",
     lastName="string",
     firstName="string",
