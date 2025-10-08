@@ -1,3 +1,0 @@
-from tests.test_authentication import test_authentification
-
-test_authentification()
